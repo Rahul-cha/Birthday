@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:Poppins,sans-serif;
+
+background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:100vh;
+
+overflow:hidden;
+
+color:white;
+
+}
+
+.container{
+
+text-align:center;
+
+max-width:800px;
+
+padding:40px;
+
+}
+
+h1{
+
+font-family:"Dancing Script",cursive;
+
+font-size:70px;
+
+margin-bottom:20px;
+
+animation:fadeDown 1.5s;
+
+}
+
+.subtitle{
+
+font-size:22px;
+
+margin-bottom:35px;
+
+opacity:.9;
+
+animation:fadeUp 2s;
+
+}
+
+button{
+
+padding:16px 40px;
+
+border:none;
+
+border-radius:40px;
+
+background:white;
+
+color:#ff4f81;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+button:hover{
+
+transform:translateY(-5px) scale(1.05);
+
+}
+
+.card{
+
+display:none;
+
+margin-top:40px;
+
+background:rgba(255,255,255,.2);
+
+backdrop-filter:blur(12px);
+
+padding:35px;
+
+border-radius:25px;
+
+line-height:1.9;
+
+font-size:20px;
+
+animation:fadeIn 1.5s;
+
+}
+
+.signature{
+
+margin-top:25px;
+
+font-family:"Dancing Script",cursive;
+
+font-size:40px;
+
+}
+
+.heart{
+
+position:fixed;
+
+font-size:22px;
+
+animation:float 8s linear infinite;
+
+pointer-events:none;
+
+opacity:.8;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(100vh) scale(.5);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120px) scale(1.5);
+
+opacity:0;
+
+}
+
+}
+
+@keyframes fadeDown{
+
+from{
+
+opacity:0;
+
+transform:translateY(-50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:scale(.9);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Happy Birthday ❤️</h1>
+
+<p class="subtitle">
+Today is all about celebrating the amazing person you are.
+</p>
+
+<button onclick="showMessage()">
+Open My Letter 💌
+</button>
+
+<div class="card" id="letter">
+
+<p>
+
+Happy Birthday, POPO. ❤️
+
+<br><br>
+
+I just wanted to remind you how grateful I am that you are part of my life.
+
+You make ordinary days feel special, and your smile has a way of making everything better.
+
+I hope this year brings you countless reasons to laugh, dream bigger than ever, and find happiness in every little moment.
+
+Thank you for being exactly who you are.
+
+Never stop smiling, never stop believing in yourself, and never forget how deeply you are loved.
+
+I may not always find the perfect words, but one thing will always remain true—
+
+I'll always be cheering for you, caring about you, and wishing nothing but the very best for you.
+
+Happy Birthday, beautiful.
+
+I hope today becomes one of your happiest memories.
+
+❤️🎂🎉
+
+</p>
+
+<div class="signature">
+
+With all my love,<br>
+Your Name
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function showMessage(){
+
+document.getElementById("letter").style.display="block";
+
+document.querySelector("button").style.display="none";
+
+}
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(15+Math.random()*25)+"px";
+
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},10000);
+
+}
+
+setInterval(createHeart,400);
+
+</script>
+
+</body>
+</html>
