@@ -8,227 +8,312 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
 
-font-family:Poppins,sans-serif;
+    font-family:'Poppins',sans-serif;
 
-background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+    background:linear-gradient(135deg,#ffdde1,#ee9ca7);
 
-display:flex;
+    color:white;
 
-justify-content:center;
+    min-height:100vh;
 
-align-items:center;
+    overflow-x:hidden;
 
-min-height:100vh;
+    overflow-y:auto;
 
-overflow:hidden;
-
-color:white;
+    padding:40px 20px;
 
 }
 
 .container{
 
-text-align:center;
+    width:100%;
 
-max-width:800px;
+    max-width:850px;
 
-padding:40px;
+    margin:auto;
+
+    text-align:center;
 
 }
 
 h1{
 
-font-family:"Dancing Script",cursive;
+    font-family:'Dancing Script',cursive;
 
-font-size:70px;
+    font-size:72px;
 
-margin-bottom:20px;
+    margin-top:40px;
 
-animation:fadeDown 1.5s;
+    animation:fadeDown 1.2s;
 
 }
 
 .subtitle{
 
-font-size:22px;
+    margin-top:15px;
 
-margin-bottom:35px;
+    font-size:22px;
 
-opacity:.9;
+    opacity:.9;
 
-animation:fadeUp 2s;
+    animation:fadeUp 1.5s;
 
 }
 
 button{
 
-padding:16px 40px;
+    margin-top:40px;
 
-border:none;
+    padding:16px 40px;
 
-border-radius:40px;
+    border:none;
 
-background:white;
+    border-radius:40px;
 
-color:#ff4f81;
+    background:white;
 
-font-size:18px;
+    color:#ff4f81;
 
-font-weight:600;
+    font-size:18px;
 
-cursor:pointer;
+    font-weight:600;
 
-transition:.3s;
+    cursor:pointer;
 
-box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:.3s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
 
 }
 
 button:hover{
 
-transform:translateY(-5px) scale(1.05);
+    transform:translateY(-5px);
 
 }
 
 .card{
 
-display:none;
+    display:none;
 
-margin-top:40px;
+    margin-top:60px;
 
-background:rgba(255,255,255,.2);
+    background:rgba(255,255,255,.22);
 
-backdrop-filter:blur(12px);
+    backdrop-filter:blur(15px);
 
-padding:35px;
+    border-radius:25px;
 
-border-radius:25px;
+    padding:40px;
 
-line-height:1.9;
+    animation:fadeIn 1s;
 
-font-size:20px;
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
 
-animation:fadeIn 1.5s;
+}
+
+.memory-photo{
+
+    width:220px;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    border:5px solid rgba(255,255,255,.8);
+
+    margin-bottom:30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+    transition:.4s;
+
+}
+
+.memory-photo:hover{
+
+    transform:scale(1.05);
+
+}
+
+.card p{
+
+    font-size:20px;
+
+    line-height:2;
 
 }
 
 .signature{
 
-margin-top:25px;
+    margin-top:35px;
 
-font-family:"Dancing Script",cursive;
+    font-family:'Dancing Script',cursive;
 
-font-size:40px;
+    font-size:42px;
 
 }
 
 .heart{
 
-position:fixed;
+    position:fixed;
 
-font-size:22px;
+    bottom:-50px;
 
-animation:float 8s linear infinite;
+    animation:float linear forwards;
 
-pointer-events:none;
+    pointer-events:none;
 
-opacity:.8;
+    z-index:-1;
 
 }
 
 @keyframes float{
 
-0%{
+    from{
 
-transform:translateY(100vh) scale(.5);
+        transform:translateY(0);
 
-opacity:0;
+        opacity:1;
 
-}
+    }
 
-20%{
+    to{
 
-opacity:1;
+        transform:translateY(-120vh);
 
-}
+        opacity:0;
 
-100%{
-
-transform:translateY(-120px) scale(1.5);
-
-opacity:0;
-
-}
+    }
 
 }
 
 @keyframes fadeDown{
 
-from{
+    from{
 
-opacity:0;
+        opacity:0;
 
-transform:translateY(-50px);
+        transform:translateY(-40px);
 
-}
+    }
 
-to{
+    to{
 
-opacity:1;
+        opacity:1;
 
-transform:translateY(0);
+        transform:translateY(0);
 
-}
+    }
 
 }
 
 @keyframes fadeUp{
 
-from{
+    from{
 
-opacity:0;
+        opacity:0;
 
-transform:translateY(50px);
+        transform:translateY(40px);
 
-}
+    }
 
-to{
+    to{
 
-opacity:1;
+        opacity:1;
 
-transform:translateY(0);
+        transform:translateY(0);
 
-}
+    }
 
 }
 
 @keyframes fadeIn{
 
-from{
+    from{
 
-opacity:0;
+        opacity:0;
 
-transform:scale(.9);
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
 
 }
 
-to{
+/* Mobile */
 
-opacity:1;
+@media(max-width:768px){
 
-transform:scale(1);
+h1{
+
+font-size:52px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+.card{
+
+padding:25px;
+
+}
+
+.card p{
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+.memory-photo{
+
+width:170px;
+
+height:170px;
+
+}
+
+.signature{
+
+font-size:34px;
 
 }
 
@@ -245,18 +330,24 @@ transform:scale(1);
 <h1>Happy Birthday ❤️</h1>
 
 <p class="subtitle">
+
 Today is all about celebrating the amazing person you are.
+
 </p>
 
 <button onclick="showMessage()">
+
 Open My Letter 💌
+
 </button>
 
 <div class="card" id="letter">
 
+<img src="us.jpg" class="memory-photo" alt="Our Photo">
+
 <p>
 
-Happy Birthday, POPO. ❤️
+Happy Birthday, <strong>POPO ❤️</strong>
 
 <br><br>
 
@@ -268,15 +359,17 @@ I hope this year brings you countless reasons to laugh, dream bigger than ever, 
 
 Thank you for being exactly who you are.
 
-Never stop smiling, never stop believing in yourself, and never forget how deeply you are loved.
+Never stop smiling.
 
-I may not always find the perfect words, but one thing will always remain true—
+Never stop believing in yourself.
 
-I'll always be cheering for you, caring about you, and wishing nothing but the very best for you.
+Never forget how deeply you are loved.
 
-Happy Birthday, beautiful.
+No matter where life takes us, I will always wish for your happiness, your success, and your beautiful smile.
 
 I hope today becomes one of your happiest memories.
+
+Happy Birthday once again, my beautiful girl.
 
 ❤️🎂🎉
 
@@ -285,7 +378,8 @@ I hope today becomes one of your happiest memories.
 <div class="signature">
 
 With all my love,<br>
-Your Name
+
+Rahul ❤️
 
 </div>
 
@@ -297,9 +391,23 @@ Your Name
 
 function showMessage(){
 
-document.getElementById("letter").style.display="block";
+const letter=document.getElementById("letter");
+
+letter.style.display="block";
 
 document.querySelector("button").style.display="none";
+
+setTimeout(()=>{
+
+letter.scrollIntoView({
+
+behavior:"smooth",
+
+block:"start"
+
+});
+
+},200);
 
 }
 
@@ -323,7 +431,7 @@ setTimeout(()=>{
 
 heart.remove();
 
-},10000);
+},9000);
 
 }
 
